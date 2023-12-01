@@ -3,6 +3,9 @@ public class App {
         // Starting a new single player game.
         Game game = new Game();
         System.out.println("Current position of player is: " + game.position);
-        System.out.println(Game.rollDice());
+
+        // roll dice and move the player in game.
+        game.rollDice();
+        System.out.println("Current position of player is: " + game.position);
     }
 }

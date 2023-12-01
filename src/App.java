@@ -7,5 +7,8 @@ public class App {
         // roll dice and move the player in game.
         game.rollDice();
         System.out.println("Current position of player is: " + game.position);
+
+        // Play game for single player.
+        game.play();
     }
 }

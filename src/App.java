@@ -1,14 +1,13 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        // Starting a new single player game.
-        Game game = new Game();
-        System.out.println("Current position of player is: " + game.position);
+        // Creating two players
+        Player player01 = new Player("Player01");
+        Player player02 = new Player("Player02");
 
-        // roll dice and move the player in game.
-        game.rollDice();
-        System.out.println("Current position of player is: " + game.position);
+        // Starting a new two player game.
+        Game game = new Game(player01, player02);
 
-        // Play game for single player.
+        // Play game for two players.
         game.play();
     }
 }

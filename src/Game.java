@@ -10,13 +10,16 @@ public class Game {
     // UC3: function to get next posiion of the player
     public void rollDice() {
         Random random = new Random();
-        int dice = random.nextInt(6) + 1;
+        int dice = random.nextInt(7);
         int choice = random.nextInt(3);
 
         switch (choice) {
             // Ladder
             case 1:
-                this.position += dice;
+                // UC5: check for perfect score of 100 at last move
+                if (this.position + dice <= 100) {
+                    this.position += dice;
+                } // else do nothing
                 break;
 
             // Snake
